@@ -1,0 +1,373 @@
+/*!
+ * Theme Name: Rocio Gordillo
+ * Description: Tema para Rocio Gordillo
+ * Author: Violeta Rosales
+ * Author URI: http://www.violetarosales.com
+ * Version: 1.0
+ */
+
+/*
+ * CSS Compilado el: #{timestamp()}
+ */
+
+
+//
+// Imports
+// -------------------------------------------
+@import "init"
+@import "font-awesome"
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,700)
+
+//
+// General
+// -------------------------------------------
+*:focus
+	outline: none
+
+body 
+	+Raleway(400)
+
+p
+	font-size: 1em
+	line-height: 1.5em
+	margin-bottom: $spacer
+
+h1
+	color: white
+	text-shadow: 1px 1px 3px rgba(0,0,0,.3)
+	font-size: 1.5em
+	text-transform: uppercase
+	padding: 13px 0 0 0
+
+h2
+	text-align: center
+	font-size: 3em
+	text-transform: uppercase
+	padding: 0 0 $spacer*3 0
+	color: $gold
+	span
+		content: " "
+		height: 20px
+		width: 100%
+		display: inline
+		position: relative
+		padding-bottom: $spacer
+
+strong
+	font-weight: 700
+
+
+
+h3
+	text-align: left
+	font-size: 1.5em
+	text-transform: uppercase
+	margin: $spacer*3 0 $spacer*1.5 0
+
+a
+	text-decoration: none
+	color: inherit
+
+.container
+	max-width: 1000px
+	+box-sizing(border-box)
+	padding: 0 $spacer
+	margin: 0 auto
+
+body
+	>div
+		padding: $spacer*6 0
+		
+
+//
+// Header
+// -------------------------------------------
+header
+	@extend %clearfix
+	padding: $spacer/2 0
+	position: fixed
+	width: 100%
+	background: rgba(0,0,0, .7)
+	z-index: 999
+	+box-shadow(0px 0px 20px 0px rgba(0,0,0,.3))
+
+	.logo
+		display: block
+		float: left
+
+
+//
+// Navigation
+// -------------------------------------------
+nav
+	float: right
+	li
+		display: inline-block
+		padding: 19px $spacer/1.5 10px $spacer/1.5
+		a
+			color: white
+			text-transform: uppercase
+			text-decoration: none
+			display: block
+			padding-bottom: 5px
+			font-size: .9em
+			+single-transition(all, .3s)
+			&:hover
+				color: $aqua
+				
+		&.active a
+			color: $aqua
+
+//
+// Slider
+// -------------------------------------------
+.panel-slideshow
+	padding-top: 68px
+	padding-bottom: 0
+	background: #D8DADF
+	.item-slideshow
+		height: 600px
+		background: #D5DADD no-repeat center center
+		background-size: auto 100%
+		line-height: 600px
+
+		.item-text
+			display: inline-block
+			width: 100%
+			vertical-align: middle
+			line-height: 16px
+
+		p
+			text-align: center
+			max-width: 50%
+			margin: 0 auto
+			text-shadow: 1px 1px 3px rgba(0,0,0,.3)
+			color: white
+			font-size: 1.2em
+			font-weight: 600
+
+
+//
+// Quiénes Somos
+// -------------------------------------------
+.panel-quienes-somos
+	background: url(img/dark_wall.png)
+	p
+		color: #DDD
+	a
+		background: transparent
+		color: white
+		text-transform: uppercase
+		display: inline-block
+		padding: $spacer $spacer*2
+		border: 2px solid $gold
+		font-size: 1em
+		font-family: inherit
+		+single-transition(all, .3s)
+		&:hover
+			background: $gold
+			color: #333
+			cursor: pointer
+
+
+//
+// Noticias
+// -------------------------------------------
+.panel-noticias
+	background: url(img/dark_wall.png)
+	.item-noticias
+		@extend %box-item
+		@extend %img-full
+		.thumb
+			background: black
+			img
+				+single-transition(opacity, .3s)
+		.info
+			padding: $spacer/2
+
+		h4
+			text-transform: uppercase
+			color: black
+			padding-bottom: $spacer/2
+			font-weight: 600
+			+single-transition(color, .3s)
+
+		a:hover
+			img
+				opacity: .3
+			h4
+				color: darken($gold, 25)
+
+.post-image
+	@extend %img-full
+	margin-bottom: $spacer*1.5
+
+//
+// Portafolio
+// -------------------------------------------
+.panel-portafolio
+	background: white
+
+	.item-portafolio
+		width: 30%
+		margin: 1.5%
+		@extend %img-full
+		a
+			position: relative
+			display: block
+			.info, .zoom
+				position: absolute
+				width: 100%
+				height: 100%
+				background: rgba(black, .5)
+				top: 0
+				color: white
+				opacity: 0
+				outline: 1px solid white
+				+single-transition(all, .3s)
+
+				h4
+					padding: $spacer/2
+					font-weight: 600
+					text-transform: uppercase
+					position: absolute
+					bottom: 0
+			.zoom
+				background: rgba(black, .5) url(img/zoom.png) center center no-repeat
+			&:hover
+				.info, .zoom
+					opacity: 1
+
+
+
+//
+// Reconocimientos
+// -------------------------------------------
+.panel-reconocimientos
+	background: white
+	text-align: center
+	img
+		width: 33%
+		height: auto
+
+//
+// Contacto
+// -------------------------------------------
+.panel-contacto 
+	background: url(img/dark_wall.png)
+	p
+		text-align: center
+		font-size: 1.3em
+	br
+		display: none
+	
+	.wpcf7-form-control-wrap
+		width: 31%
+		margin-right: 1.5%
+		display: inline-block
+		&:last-of-type input
+			margin-right: 0
+		&:nth-of-type(4)
+			width: 100%
+			margin-right: 0
+
+	.wpcf7-form-control.wpcf7-textarea
+		width: 100%
+
+	input, textarea
+		border: none
+		border-bottom: 2px solid white
+		+box-sizing(border-box)
+		padding: $spacer 0
+		font-size: 1em
+		font-family: inherit
+		+single-transition(all, .3s)
+		background: transparent
+		color: #CCC
+		width: 100%
+		&:focus
+			border-bottom: 2px solid $gold
+
+	textarea
+		width: 100%
+		margin-right: 0
+		margin-top: $spacer
+		height: 300px
+
+	.action
+		text-align: center
+		margin-top: $spacer
+
+	input[type="submit"]
+		background: transparent
+		color: white
+		text-transform: uppercase
+		display: inline-block
+		padding: $spacer $spacer*2
+		border: 2px solid $gold
+		font-size: 1em
+		font-family: inherit
+		width: auto
+		margin-top: $spacer
+		+single-transition(all, .3s)
+		&:hover
+			background: $gold
+			color: #333
+			cursor: pointer
+
+	#result
+		color: white
+		padding: 10px
+		height: 30px
+		opacity: 0
+		+single-transition(opacity, .3s)
+		>div
+			padding: 15px
+	.success
+		background-color: #6dc36c
+		border-left: 5px solid darken(#6dc36c, 10)
+	.error
+		background-color: $darkRed
+		border-left: 5px solid red
+	.sending
+		background-color: #f7de74
+		color: #b9a757 !important
+		border-left: 5px solid darken(#f7de74, 10)
+
+
+//
+// Footer
+// -------------------------------------------
+footer
+	padding: $spacer 0
+	background: #333
+
+	.the-grid-03 >div
+		margin-bottom: 0 !important
+
+	p
+		font-size: .7em
+		color: white
+		margin-bottom: 0
+		a
+			font-weight: 600
+		span
+			margin: 0 $spacer/2
+
+	.place
+		text-align: right
+
+	.copy
+		text-align: center
+
+
+//
+// Responsive. Yeah, bitch!
+// -------------------------------------------
+@media screen and (max-width: 600px)
+
+//
+// F*cking, hacks
+// -------------------------------------------
+#wpadminbar
+	padding: 0

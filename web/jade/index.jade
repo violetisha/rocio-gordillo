@@ -1,0 +1,153 @@
+include includes/mixines
+doctype html
+- location = "home"
+html 
+	include includes/head
+
+		
+	body
+		// ========================
+		// Header
+		// ========================
+		include includes/header
+
+
+
+		// ========================
+		// Magazine
+		// ========================
+		#magazine.panel-slideshow
+			.item-slideshow(style="background-image: url(img/slide-01.jpg)")
+				
+
+
+		// ========================
+		// Acerca De
+		// ========================	
+		#acerca-de.panel-quienes-somos
+			.container
+				h2: span Acerca de
+				.columns-2
+					p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+					p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+
+
+		// ========================
+		// Portafolio
+		// ========================
+		#portafolio.panel-portafolio
+			.container
+				h2: span Portafolio
+
+				.grid
+					.item-portafolio
+						a(href="#")
+							.thumb
+								img(src="http://lorempixel.com/640/450/business/1/", alt="placeholder")
+							.info
+								h4 Lorem ipsum dolor sit amet
+								
+
+					.item-portafolio
+						a(href="#")
+							.thumb
+								img(src="http://lorempixel.com/640/640/business/2/", alt="placeholder")
+							.info
+								h4 Lorem ipsum dolor sit amet
+					.item-portafolio
+						a(href="#")
+							.thumb
+								img(src="http://lorempixel.com/640/800/business/3/", alt="placeholder")
+							
+							.info
+								h4 Lorem ipsum dolor sit amet
+
+					.item-portafolio
+						a(href="#")
+							.thumb
+								img(src="http://lorempixel.com/640/450/business/1/", alt="placeholder")
+							.info
+								h4 Lorem ipsum dolor sit amet
+
+					.item-portafolio
+						a(href="#")
+							.thumb
+								img(src="http://lorempixel.com/640/640/business/2/", alt="placeholder")
+							.info
+								h4 Lorem ipsum dolor sit amet
+
+					.item-portafolio
+						a(href="#")
+							.thumb
+								img(src="http://lorempixel.com/640/800/business/3/", alt="placeholder")
+							
+							.info
+								h4 Lorem ipsum dolor sit amet
+
+
+		// ========================
+		// Noticias
+		// ========================
+		#noticias.panel-noticias
+			.container
+				h2: span Noticias
+
+				.the-grid-03
+					.item-noticias
+						a(href="#")
+							.thumb
+								img(src="http://lorempixel.com/640/450/business/1/", alt="placeholder")
+							.info
+								h4 Lorem ipsum dolor sit amet
+								p Maecenas vel quam id purus tincidunt interdum. Vivamus molestie, lorem in fermentum elementum
+
+					.item-noticias
+						a(href="#")
+							.thumb
+								img(src="http://lorempixel.com/640/450/business/2/", alt="placeholder")
+							.info
+								h4 Lorem ipsum dolor sit amet
+								p Maecenas vel quam id purus tincidunt interdum. Vivamus molestie, lorem in fermentum elementum
+
+					.item-noticias
+						a(href="#")
+							.thumb
+								img(src="http://lorempixel.com/640/450/business/3/", alt="placeholder")
+							
+							.info
+								h4 Lorem ipsum dolor sit amet
+								p Maecenas vel quam id purus tincidunt interdum. Vivamus molestie, lorem in fermentum elementum
+
+
+		// ========================
+		// Reconocimientos
+		// ========================
+		#reconocimientos.panel-reconocimientos
+			.container
+				h2: span Reconocimientos
+				img(src="img/reconocimiento-01.jpg", alt="")
+				img(src="img/reconocimiento-02.jpg", alt="")
+				img(src="img/reconocimiento-03.jpg", alt="")
+
+
+		// ========================
+		// Contacto
+		// ========================
+		#contacto.panel-contacto
+			.container
+				h2: span Contacto
+				
+				form(id="formulario", method="post", action="send.php")
+					input(type="text", placeholder="Nombre", id="nombre", name="nombre")
+					input(type="email", placeholder="Email", id="email", name="email")
+					input(type="text", placeholder="Asunto", id="asunto", name="asunto")
+					textarea(placeholder="Mensaje", id="mensaje", name="mensaje")
+					.action
+						button(type="submit", ) Enviar
+
+
+
+
+
+		include includes/footer

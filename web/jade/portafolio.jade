@@ -1,0 +1,82 @@
+include includes/mixines
+doctype html
+- location = "home"
+html 
+	include includes/head
+
+		
+	body
+		// ========================
+		// Header
+		// ========================
+		include includes/header
+
+
+		// ========================
+		// Portafolio
+		// ========================
+		#portafolio.panel-portafolio
+			.container
+				h2: span Lorem Ipsum
+
+				p Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo.
+
+				p Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+
+				.grid
+					.item-portafolio
+						a(href="http://lorempixel.com/640/450/business/1/", alt="placeholder", title="hola").image-link
+							.thumb
+								img(src="http://lorempixel.com/640/450/business/1/", alt="placeholder")
+							.zoom
+
+					.item-portafolio
+						a(href="http://lorempixel.com/640/640/business/2/", alt="placeholder").image-link
+							.thumb
+								img(src="http://lorempixel.com/640/640/business/2/", alt="placeholder")
+							.zoom
+
+					.item-portafolio
+						a(href="http://lorempixel.com/640/800/business/3/", alt="placeholder").image-link
+							.thumb
+								img(src="http://lorempixel.com/640/800/business/3/", alt="placeholder")
+							.zoom
+
+					.item-portafolio
+						a(href="http://lorempixel.com/640/450/business/1/", alt="placeholder").image-link
+							.thumb
+								img(src="http://lorempixel.com/640/450/business/1/", alt="placeholder")
+							.zoom
+
+					.item-portafolio
+						a(href="http://lorempixel.com/640/640/business/2/", alt="placeholder").image-link
+							.thumb
+								img(src="http://lorempixel.com/640/640/business/2/", alt="placeholder")
+							.zoom
+
+					.item-portafolio
+						a(href="http://lorempixel.com/640/800/business/3/", alt="placeholder").image-link
+							.thumb
+								img(src="http://lorempixel.com/640/800/business/3/", alt="placeholder")
+							.zoom
+
+		// ========================
+		// Contacto
+		// ========================
+		#contacto.panel-contacto
+			.container
+				h2: span Contacto
+				
+				form(id="formulario", method="post", action="send.php")
+					input(type="text", placeholder="Nombre", id="nombre", name="nombre")
+					input(type="email", placeholder="Email", id="email", name="email")
+					input(type="text", placeholder="Asunto", id="asunto", name="asunto")
+					textarea(placeholder="Mensaje", id="mensaje", name="mensaje")
+					.action
+						button(type="submit", ) Enviar
+
+
+
+
+
+		include includes/footer
